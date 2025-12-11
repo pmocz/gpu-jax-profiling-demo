@@ -12,3 +12,4 @@ wheels/
 # Extras
 slurm*
 logs/
+jax_trace.nsys-rep

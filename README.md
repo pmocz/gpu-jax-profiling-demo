@@ -11,7 +11,7 @@ For more info, see:
 * https://www.youtube.com/watch?v=pPTayTD2rOE
 
 
-# Instuctions
+# Tensorboard
 
 Submit the job to run on Rusty
 
@@ -32,3 +32,17 @@ For reference, the code will output something like:
 Time: 0.0046s
 JIT Time: 0.0087s
 ```
+
+Let's look at this and see what is happening ...
+
+## Nvidia Nsight Systems
+
+Now submit the job
+
+```bash
+sbatch sbatch_rusty_nsys.sh
+```
+
+Then, download the `jax_trace.nsys-rep` file to your machine,
+and view it with Nvidia Nsight Systems
+

@@ -3,6 +3,7 @@ import time
 
 """
 GPU JAX Profiling Demo on Rusty
+with Nvidia NSight Systems
 Philip Mocz (2025)
 """
 

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH --job-name=gpu_profiling
+#SBATCH --job-name=tensorboard_demo
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
 #SBATCH --partition=gpu
@@ -18,4 +18,4 @@ module load uv
 export PYTHONUNBUFFERED=TRUE
 
 # source .venv/bin/activate
-srun uv run python main.py
+srun uv run python main_tensorboard.py

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH --job-name=gpu_profiling
+#SBATCH --job-name=nsys_demo
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
 #SBATCH --partition=gpu

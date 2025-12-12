@@ -4,6 +4,8 @@ Philip Mocz (2025)
 
 Profiling JAX on Rusty.
 
+👉 See [slides](https://pmocz.github.io/gpu-jax-profiling-demo/)
+
 For more info, see:
 
 * https://jax-ml.github.io/scaling-book/profiling/
@@ -46,3 +48,16 @@ sbatch sbatch_rusty_nsys.sh
 Then, download the `jax_trace.nsys-rep` file to your machine,
 and view it with Nvidia Nsight Systems
 
+## Update Presentation
+
+```bash
+python -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
+```
+
+```bash
+mdslides ./presentation.md 
+```
+
+```bash
+open ./presentation/index.html
+```

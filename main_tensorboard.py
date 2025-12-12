@@ -3,6 +3,7 @@ import time
 
 """
 GPU JAX Profiling Demo on Rusty
+With TensorBoard
 Philip Mocz (2025)
 """
 
@@ -32,11 +33,11 @@ def main():
         y = my_func(x, x)
 
         # time
-        start_jit = time.time()
+        start = time.time()
         y = my_func(x, x)
         y.block_until_ready()
-        elapsed_jit = time.time() - start_jit
-        print(f"JIT Time: {elapsed_jit:.4f}s")
+        elapsed = time.time() - start
+        print(f"JIT Time: {elapsed:.4f}s")
 
 
 if __name__ == "__main__":

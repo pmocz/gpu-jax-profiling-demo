@@ -1,5 +1,5 @@
-# My title
-A subtitle maybe
+# GPU/JAX Profiling on the Cluster
+Philip Mocz (2025)
 
 [comment]: # (!!!)
 

@@ -13,3 +13,4 @@ wheels/
 slurm*
 logs/
 jax_trace.nsys-rep
+presentation/

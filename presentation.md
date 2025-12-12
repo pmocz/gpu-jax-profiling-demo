@@ -29,8 +29,8 @@ profiling JAX GPU code with:
 
 ## Warm-Up Pattern
 
-When profiling, it's usually a good idea to run a function once before actually profiling it, since there is overhead with the initial setup.
-Before profiling, make sure we've done something like `block_until_ready()`
+* When profiling, it's usually a good idea to run a function once before actually profiling it, since there is overhead with the initial setup.
+* Before profiling, make sure we've done something like `block_until_ready()`
 
 ```python
 import jax, jax.numpy as jnp
@@ -54,9 +54,9 @@ y.block_until_ready()
 
 ## TensorBoard/xprof
 
-XProf (from OpenXLA) offers a number of tools to analyse and visualize the performance of your model across multiple devices.
+* XProf (from OpenXLA) offers a number of tools to analyse and visualize the performance of your model across multiple devices.
 
-TensorBoard is a suite of web applications for inspecting and understanding machine learning experimentation.
+* TensorBoard is a suite of web applications for inspecting and understanding machine learning experimentation.
 
 ```console
 pip install tensorboard tensorboard-plugin-profile
@@ -94,15 +94,13 @@ Now in TensorBoard: **Profile → Trace Viewer**
 
 ## Getting Clean Traces
 
-Getting clean traces
+- Trace only the interesting window (avoid compile warmup)
 
-Trace only the interesting window (avoid compile warmup)
+- Put block_until_ready() at the end of each iteration during tracing
 
-Put block_until_ready() at the end of each iteration during tracing
+- Keep loops small (1–20 steps)
 
-Keep loops small (1–20 steps)
-
-Use stable shapes to avoid recompilation noise
+- Use stable shapes to avoid recompilation noise
 
 [comment]: # (!!!)
 

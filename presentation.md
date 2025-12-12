@@ -123,7 +123,7 @@ def train_step(params, batch):
 
 [comment]: # (!!!)
 
-## Interpreting TensorBoard traces
+## Interpreting traces
 
 Look for:
 

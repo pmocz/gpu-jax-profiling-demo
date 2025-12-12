@@ -1,0 +1,61 @@
+name: Publish Presentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'presentation.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install markdown-slides
+        run: |
+          pip install git+https://gitlab.com/da_doomer/markdown-slides.git
+
+      - name: Compile presentation
+        run: |
+          mdslides ./presentation.md
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add presentation/
+          git diff --cached --quiet || (git commit -m "docs: regenerate presentation from markdown" && git push)
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: 'presentation/'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

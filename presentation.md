@@ -56,7 +56,7 @@ y.block_until_ready()
 
 [comment]: # (!!!)
 
-## TensorBoard/xprof
+## XProf/TensorBoard
 
 * XProf (from OpenXLA) offers a number of tools to analyse and visualize the performance of your model across multiple devices
 
@@ -126,6 +126,13 @@ def train_step(params, batch):
 ```
 
 [comment]: # (!!!)
+
+## Can Profile Device Memory too:
+
+See [https://docs.jax.dev/en/latest/device_memory_profiling.html](https://docs.jax.dev/en/latest/device_memory_profiling.html)
+
+* Understand how program is using GPU/TPU memory
+* Debug memory leaks
 
 ## Interpreting traces
 

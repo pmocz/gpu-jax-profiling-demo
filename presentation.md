@@ -168,6 +168,11 @@ nsys profile \
 
 ![Roofline Model](roofline0.png)
 
+* Memory-bound vs compute-bound
+* Fusion moves you right
+* Precision moves the roof up
+* Helps answer: what optimization is worth it?
+
 [comment]: # (!!!)
 
 ## Roofline Model
@@ -181,6 +186,10 @@ nsys profile \
 * Do as much heavy-duty work directly on GPU as possible. Minimize large copies between CPU--GPU
 
 * Use single/mixed-precision if possible
+
+* Prefer fused, large kernels
+
+* Profile early - not after months of work
 
 * Asynchronous read/writes:
 

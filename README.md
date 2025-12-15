@@ -55,7 +55,7 @@ python -m pip install git+https://gitlab.com/da_doomer/markdown-slides.git
 ```
 
 ```bash
-mdslides ./presentation.md 
+mdslides ./presentation.md --include media
 ```
 
 ```bash

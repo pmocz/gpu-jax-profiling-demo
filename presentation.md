@@ -34,6 +34,11 @@ profiling JAX GPU code with:
 ## Warm-Up Pattern
 
 * When profiling, it's usually a good idea to run a function once before actually profiling it, since there is overhead with the initial setup.
+
+[comment]: # (!!!)
+
+## Warm-Up Pattern
+
 * Before profiling, make sure we've done something like `block_until_ready()`
 
 ```python
@@ -134,6 +139,8 @@ See [https://docs.jax.dev/en/latest/device_memory_profiling.html](https://docs.j
 * Understand how program is using GPU/TPU memory
 * Debug memory leaks
 
+[comment]: # (!!!)
+
 ## Interpreting traces
 
 Look for:
@@ -150,7 +157,7 @@ Look for:
 
 [comment]: # (!!!)
 
-# NVIDIA Nsight Systems (nsys)
+## NVIDIA Nsight Systems (nsys)
 
 Best for: end-to-end timeline across:
 

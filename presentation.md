@@ -177,7 +177,7 @@ nsys profile \
 
 ## Roofline Model
 
-![Roofline Model](roofline0.png)
+![Roofline Model](media/roofline0.png)
 
 * Memory-bound vs compute-bound
 * Fusion moves you right
@@ -188,7 +188,7 @@ nsys profile \
 
 ## Roofline Model
 
-![Roofline Model](roofline.png)
+![Roofline Model](media/roofline.png)
 
 [comment]: # (!!!)
 

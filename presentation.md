@@ -202,6 +202,10 @@ nsys profile \
 
 * Profile early - not after months of work
 
+[comment]: # (!!!)
+
+## Tips-and-Tricks
+
 * Asynchronous read/writes:
 
 ```python

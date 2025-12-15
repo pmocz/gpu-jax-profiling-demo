@@ -13,12 +13,12 @@ For more info, see:
 * https://www.youtube.com/watch?v=pPTayTD2rOE
 
 
-# Tensorboard
+# XProf/TensorBoard
 
 Submit the job to run on Rusty
 
 ```bash
-sbatch sbatch_rusty.sh
+sbatch sbatch_rusty_tensorboard.sh
 ```
 
 Then, download the `logs/` folder to your machine,

@@ -5,7 +5,7 @@ Philip Mocz (2025)
 
 For this session, we look at
 profiling JAX GPU code with:
-* TensorBoard/xprof
+* XProf/TensorBoard
 * NVIDIA Nsight Systems (nsys)
 
 [comment]: # (!!!)
@@ -54,9 +54,9 @@ y.block_until_ready()
 
 ## TensorBoard/xprof
 
-* XProf (from OpenXLA) offers a number of tools to analyse and visualize the performance of your model across multiple devices.
+* XProf (from OpenXLA) offers a number of tools to analyse and visualize the performance of your model across multiple devices
 
-* TensorBoard is a suite of web applications for inspecting and understanding machine learning experimentation.
+* TensorBoard is a suite of web applications for inspecting and understanding machine learning experimentation
 
 ```console
 pip install tensorboard tensorboard-plugin-profile
@@ -160,6 +160,40 @@ nsys profile \
   --sample=none \
   --output=nsys_report \
   python your_script.py
+```
+
+[comment]: # (!!!)
+
+## Roofline Model
+
+![Roofline Model](roofline0.png)
+
+[comment]: # (!!!)
+
+## Roofline Model
+
+![Roofline Model](roofline.png)
+
+[comment]: # (!!!)
+
+## Tips-and-Tricks
+
+* Do as much heavy-duty work directly on GPU as possible. Minimize large copies between CPU--GPU
+
+* Use single/mixed-precision if possible
+
+* Asynchronous read/writes:
+
+```python
+import orbax.checkpoint as ocp
+
+ckptr = ocp.AsyncCheckpointer(ocp.StandardCheckpointHandler())
+
+save_response = ckptr.save(...)
+
+# You can continue with other computations here while saving happens in the background!!!
+
+save_response.wait_until_finished()
 ```
 
 [comment]: # (!!!)

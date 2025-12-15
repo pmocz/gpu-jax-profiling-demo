@@ -1,4 +1,8 @@
+[comment]: # (THEME = moon)
+[comment]: # (CODE_THEME = base16/zenburn)
+
 # GPU/JAX Profiling on the Cluster
+
 Philip Mocz (2025)
 
 [comment]: # (!!!)

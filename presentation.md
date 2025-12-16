@@ -5,6 +5,8 @@
 
 Philip Mocz (2025)
 
+see: [https://github.com/pmocz/gpu-jax-profiling-demo](https://github.com/pmocz/gpu-jax-profiling-demo)
+
 [comment]: # (!!!)
 
 For this session, we look at

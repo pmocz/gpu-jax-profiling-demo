@@ -2,7 +2,7 @@
 
 Philip Mocz (2025)
 
-Profiling JAX on Rusty.
+Profiling JAX on Rusty. Dec 16, 2025 Sciware event.
 
 👉 See [slides](https://pmocz.github.io/gpu-jax-profiling-demo/)
 
@@ -11,6 +11,7 @@ For more info, see:
 * https://jax-ml.github.io/scaling-book/profiling/
 * https://docs.jax.dev/en/latest/profiling.html#
 * https://www.youtube.com/watch?v=pPTayTD2rOE
+* https://sciware.flatironinstitute.org/
 
 
 # XProf/TensorBoard

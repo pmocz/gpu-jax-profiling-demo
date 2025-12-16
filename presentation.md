@@ -13,6 +13,7 @@ For this session, we look at
 profiling JAX GPU code with:
 * XProf/TensorBoard
 * NVIDIA Nsight Systems (nsys)
+* see also: Perfetto
 
 [comment]: # (!!!)
 

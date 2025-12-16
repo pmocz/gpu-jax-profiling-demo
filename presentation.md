@@ -80,9 +80,7 @@ tensorboard --logdir ./tb-logs --port 6006
 ## Minimal JAX trace capture
 
 ```python
-import os
-import jax
-import jax.numpy as jnp
+import jax, jax.numpy as jnp
 
 logdir = "./tb-logs"
 
@@ -119,8 +117,7 @@ Now in TensorBoard: **Profile → Trace Viewer**
 ## Add named regions (so traces are readable)
 
 ```python
-import jax
-import jax.numpy as jnp
+import jax, jax.numpy as jnp
 
 @jax.jit
 def train_step(params, batch):
